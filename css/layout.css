@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* 레이아웃서식 header, main, footer 공통 서식*/
+
+/* 헤더, 푸터 서식 */
+
+
+ /*html만으로 스무스하게 이동하는 방법*/
+/* html{
+    scroll-behavior: smooth;
+}    */
+
+
+/* 모달창 서식 */
+.modal{
+    position: fixed;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+.inner{/*가로세로 높이값 줘야함*/
+    width: 450px;
+    height: 640px;/*이미지600, 오늘하루 열지않음 40*/
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.inner img{/*이미지랑 흰색박스 사이의 간격을 없애기위해 전체 마진0, 패딩0, 이미지에 블럭 줘야함*/
+    display: block;
+}
+.inner>p{
+    background: #fff;
+    line-height: 40px;
+    font-size:12px;
+    padding:0px 5px;
+}
+.inner #c_btn{
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    background: #fff;
+    position: absolute;
+    right: 10px;bottom:5px;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;/*젤 위로 올라와야해서*/
+}
+header:hover{
+    background: rgba(255,255,255,0.8);
+}
+
+/* 세로스크롤 값이 1100px이상일 경우 header배경색 적용 */
+.act{
+    background: rgba(255,255,255,0.8) !important;
+}
+header> h1{
+    padding: 30px 25px 2%;
+}
+header i.fas{
+    position: absolute;
+    top: 24px;
+    font-size: 1.6rem;
+    color: var(--t-color02);
+}
+i.fa-user{
+    right: 6%;
+}
+i.fa-bell{
+    right: 2%;
+}
+header nav{
+    width: 600px;
+    margin: -58px auto 0px auto;
+}
+header .gnb{
+    display: flex;
+    justify-content: space-around;
+}
+header .gnb > li > a{
+    font-size: 1.2rem;
+    color: var(--t-color02);
+}
+
+
+/* 원형 내비게이션 서식 */
+#m_nav{
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 200px;height: 200px;
+    border: 3px solid #f00;
+}
+#m_nav> ul{
+    position: relative;
+}
+#m_nav>ul>li{
+    width: 40px;height: 40px;border-radius: 20px;
+    line-height: 40px;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    transition:0.5s;
+}
+#m_nav>ul>li:hover{
+    width: 200px;
+}
+#m_nav > ul>li:first-child{top: 0;}
+#m_nav > ul>li:nth-child(2){top: 50px;}
+#m_nav > ul>li:nth-child(3){top: 100px;}
+#m_nav > ul>li:nth-child(4){top: 150px;}
+#m_nav > ul>li:last-child{top: 200px;}
+
+#m_nav>ul>li>span{
+    display: inline-block;
+    width: 40px;height: 40px;
+    border-radius: 50%;
+    background: rgb(99, 191, 231);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+#m_nav>ul>li> a{
+    font-size: 16px;
+    color: #fff;
+    padding-left: 40px;
+    position: absolute;
+}
+#m_nav>ul>li:hover >span{
+    background: rgb(6, 75, 153);
+}
+
+
+
+
+
+
+
+
+
+
+/* 푸터 서식 */
+footer{
+    background: #1c1a1b;
+    width: 100%;
+    padding: 40px 0px;
+}
+footer::after{
+    display: block;
+    content:"";
+    clear:both;
+    /* 이 3가지가 자식의 플로트 속성을 해지해줌
+        부모에게 줘야 함
+    */
+}
+.f_inner{
+    width: 1200px;
+    margin: 0px auto;
+}
+footer h2{
+    float: left;
+    padding-top: 10px;
+    width: 150px;height: 60px;
+}
+.f_lnb, address{
+    width: 1000px;float: left;
+}
+.f_lnb ul{
+    display: flex;
+    padding-top: 15px;
+}
+.f_lnb ul a{
+    color:#ccc;
+    border-right: 1px solid #ccc;
+    padding: 0px 20px;
+}
+.f_lnb ul li:nth-child(2) a{
+    color: var(--t-color02);
+}
+.f_lnb ul li:last-child a{
+    border: none;
+}
+footer address{
+    padding-top: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--t-color02);
+    padding-left: 20px;
+}
+footer address dl{
+}
+footer address dt{display: inline-block;}/*한 줄로 배치되 것을 옆으로 나란히 배치하기위해 인라인 블럭 줌 */
+footer address dd{display: inline-block;}
+footer p{
+}
+
