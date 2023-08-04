@@ -98,7 +98,54 @@
 
         <section id="top3">
             <h2>가장 많이 찾는 캐스퍼 TOP3</h2>
-        </section>
+            <p class="p01">지금 가장 인기 있는 조합을 확인해보세요.</p>
+            <div class="swiper top3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="rank">1위</span>
+                  <h3 class="top3_title">가솔린 1.0터보 인스퍼레이션</h3>
+                  <img src="./images/color_khaki.02b812c.png" alt="카키">
+                  <ul class='detail'>
+                    <li><span class="outer_color kaki">카키</span>외장색상<br> 톰보이 카키</li>
+                    <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+                    <li>선택품목<br> 캐스퍼 액티브 ll</li>
+                    <li><em class="price">19,600,000</em>원</li>
+                  </ul>
+                  <input type="button" value="견적내기 &gt;" class="total_price_btn">
+                </div>
+                <div class="swiper-slide">
+                  <span class="rank">2위</span>
+                  <h3 class="top3_title">가솔린 1.0터보 인스퍼레이션</h3>
+                  <img src="./images/color_white.bebc88b.png" alt="화이트">
+                  <ul class='detail'>
+                    <li><span class="outer_color white">화이트</span>외장색상<br> 톰보이 화이트</li>
+                    <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+                    <li>선택품목<br> 캐스퍼 액티브 ll</li>
+                    <li><em class="price">18,000,000</em>원</li>
+                  </ul>
+                  <input type="button" value="견적내기 &gt;" class="total_price_btn">
+                </div>
+                <div class="swiper-slide">
+                  <span class="rank">3위</span>
+                  <h3 class="top3_title">가솔린 1.0터보 인스퍼레이션</h3>
+                  <img src="./images/color_orange.0c6edb3.png" alt="오렌지">
+                  <ul class='detail'>
+                    <li><span class="outer_color orange">오렌지</span>외장색상<br> 톰보이 오렌지</li>
+                    <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+                    <li>선택품목<br> 캐스퍼 액티브 ll</li>
+                    <li><em class="price">16,200,000</em>원</li>
+                  </ul>
+                  <input type="button" value="견적내기 &gt;" class="total_price_btn">
+                </div>
+              </div>
+              <!-- 콘트롤 버튼 -->
+              <div class="swiper-pagination2"></div>
+              <!-- 좌, 우버튼 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div> 
+      
+          </section>
 
         <section id="intro">
             <h2>소개</h2>
@@ -164,5 +211,20 @@
 
     <!-- 스와이퍼 슬라이드 스크립트 -->
     <script src="./script/swiper.js"></script>
+    <script>
+        var swiper = new Swiper(".top3", {
+            autoplay:{
+                delay:2500,
+                disableOninteraction: false,
+            },
+            navigation:{
+                nextEl:".top3 .swiper-button-next",
+                prevEl:".top3 .swiper-button-prev",
+            }, 
+            pagination:{
+                el:".swiper-pagination2"
+            }
+        })
+    </script>
 </body>
 </html>

@@ -7,6 +7,7 @@ main{}
 #main_intro{
     height: 100vh;/*내가 보는 화면의 높이에 꽉차게 해줌(뷰 하이트)*/
     overflow: hidden;
+    position: relative;
 }
 #main_intro > h2{
     display: none;
@@ -31,7 +32,7 @@ main{}
 #main_intro article a{
     font-size: var(--t-size14);
     color: var(--t-color02);
-    text-decoration: none;
+    text-decoration: underline;
     margin: 0px 20px;
     padding: 5px 10px;
 }
@@ -51,6 +52,108 @@ main{}
 }
 #top3, #intro, #test, #event, #buy, #cs{
     margin: 80px auto;
-    width: 1200px;height: 800px;
-    background: #8ebce7;
+    width: 1200px;
+    overflow: hidden;
 }
+
+/* 메인 콘텐츠 공통 제목서식 */
+main section>h2{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+#top3 .p01{
+    text-align: center;
+    font-size: var(--t-size14);
+    line-height: 50px;
+}
+
+/* 스와이퍼 슬라이드 서식 */
+#top3 .swiper-slide{
+    text-align: center;
+}
+.top3{
+    margin-top: 70px;
+    position: relative;/*위에 가 있는 좌우 버튼이 제자리를 찾기위해서 부모에게 포지션을 줌*/
+}
+.top3 .rank{
+    color: #327186;
+    border: 1px solid #327186;
+    padding: 6px 30px;
+    border-radius: 20px;
+    font-size: var(--t-size14);
+}
+.top3_title{
+    font-size: 26px;
+    font-weight: 500;
+    color: #043e96;
+    padding-top: 30px;
+}
+
+/* 자동차 사진 서식 */
+.top3 img{
+    padding: 80px 0px;
+    width: 400px;
+}
+
+/* 자동차 상세 내용 서식 */
+.top3 .detail{
+    display:flex;
+    justify-content:center;
+    padding-bottom:60px;
+}
+.top3 .detail li{
+    width: 180px;
+    border-right: 1px solid #ccc;
+    padding: 0px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    
+}
+.outer_color, .inner_color{
+    display: inline-block;
+    width: 56px;height:40px;
+    text-indent: -9999px;
+    float:left;/*색깔 왼쪽, 글자 오른쪽으로 한줄 배치하기 위해서*/
+    margin-right: 30px;
+}
+.kaki{
+    background: #494b3e;
+}
+.black{
+    background: #000;
+}
+.white{
+    background: #fff;
+    border: 1px solid #CCC;
+}
+.detail li:last-child{
+    color: #043e96;
+    border-right: none;
+    padding-top: 6px;
+}
+
+/* 차량 가격정보 */
+.price{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* 견적내기 버튼 */
+.total_price_btn{
+    font-size: var(--t-size16);
+    line-height: 50px;
+    border: 1px solid #333;
+    padding: 10px 0px;
+    width: 200px;background: none;
+    font-weight: bold;
+}
+
+/* 스와이퍼 슬라이드 페이지네이션2 */
+.swiper-pagination2{
+    text-align: center;
+}
+
+
+

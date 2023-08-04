@@ -96,7 +96,6 @@ header .gnb > li > a{
     transform: translateY(-50%);
     z-index: 100;
     width: 200px;height: 200px;
-    border: 3px solid #f00;
 }
 #m_nav> ul{
     position: relative;
