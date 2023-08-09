@@ -95,6 +95,12 @@ main section>h2{
 .top3 img{
     padding: 80px 0px;
     width: 400px;
+    transition: 1.5s;/*시간을 지정해주면 크기가 커지는 것이 보임*/
+    transition-timing-function: cubic-bezier(0.1, 1.0);
+    transform: scale(0.6);
+}
+.swiper-slide-active img{/*액티브 안의 이미지에게 크기를 주는 것임*/
+    transform: scale(1.3);
 }
 
 /* 자동차 상세 내용 서식 */
@@ -176,7 +182,7 @@ main section>h2{
 #intro{
     text-align: center;
     position: relative;
-    height: 860px;overflow: hidden;/*영상을 줄이기위해  부모에게 높이를 주고 오버플:히든 함*/
+    height: 860px;/*영상을 줄이기위해  부모에게 높이를 주고 오버플:히든 함*/
 }
 #intro h2, .intro_title_left,.intro_title_right, .g_btn{
     position: absolute;
@@ -213,50 +219,152 @@ main section>h2{
 }
 
 
-/* 시승신청 */
-#test{text-align:center;}
+/* 3. 시승 신청 서식 */
+#test{
+    text-align: center;
+}
 #test article{
-  border:1px solid #ccc;
-  width:430px;height:260px;
-  padding:15px;
-  display:inline-block;/*나란히 배치*/
-  margin-top:50px;
-  vertical-align: middle;/*수평맞추기*/
+    border: 1px solid #ccc;
+    width: 430px;height: 260px;
+    padding: 15px;
+    display: inline-block;/*나란히 배치하기 위해서*/
+    vertical-align: middle;/*수평 맞추기*/
+    margin-top: 50px;
 }
-.test_drive_l{margin-right:30px;}
-.t_drive_r{
-  transform:translateY(-11px);
+.test_drive_l{
+
+    margin-right: 30px;
+
 }
-#test > article > h3{
-  font-size:24px;
-  padding-top: 20px;
-  font-weight:bold;
-  line-height:40px;
+.test_drive_r{
+
 }
-#test > article > p{
-  font-weight:500;
-  font-size:var(--f-size);
-  line-height:20px;
-  padding:20px 0px;
+#test h3{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
 }
-.test_d_btn{
-  background-color:var(--bg-color02);
-  color:#fff;
-  line-height:30px;
-  padding:10px 60px;
+#test article> .p02{
+    font-size: 18px;
+    padding: 15px;
 }
-.test_d_btn01{
-  color:#00f;
-  position:relative;top:16px;
-  display:block;
+#test article>a{
+    display: block;
+    margin: 15px auto;
 }
-.t_drive_p2{
-  transform:translateY(50px);
+.test1{
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+    width: 150px;height: 50px;
+    background: rgb(26, 26, 128);
+    
 }
-.test_drive_r .t_drive_p2{
-  transform:translateY(62px);
+.test2{
+    font-size: 16px;
+    color: #4184e8;
+    
+}
+.p03{
+position: relative;
+}
+.test_drive_l> .p03{
+    transform:translateY(50px);
+    
+}
+.test_drive_r> .p03{
+    transform:translateY(82px);
 }
 
+
+
+
+/* 4. 이벤트 배너 */
+#event{
+    background: #e6e6e6;
+    width: 100%;height: 500px;
+    padding: 60px;
+}
+
+/* 1200X300 4장(이미지크기)
+    +페이지내이션
+*/
+.e_banner{
+    position: relative;
+    width: 1200px;height: 440px;
+    margin: 40px auto 0px auto;
+    overflow:hidden;
+}
+.e_banner ul{
+    display: flex;
+    width: 4800px;/*1200X300 4장*/
+    position: absolute;/*사진 4장이 부모기준으로 움직일 거니까 포지션을 걸어줬음*/
+}
+.e_banner ul img{
+    width: 1200px;
+    height: 300px;
+}
+.e_banner .ctrl_btn{
+    width: 280px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 90px;left: 50%;
+    transform: translateX(-50%);
+}
+.e_banner .ctrl_btn span{
+    width: 60px;height: 10px;
+    background: #ccc;
+    display: inline-block;
+}
+.act1{
+    background: #333 !important;
+}
+
+
+/* 캐스퍼 구매 안내 */
+#buy{
+    text-align: center;
+}
+#buy>h3{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 60px 0px;
+}
+.t_color{
+    color: var(--t-color03);
+}
+#buy ul{
+    width: 1000px;
+    margin: 0px auto;
+    /* border: 1px solid #000; */
+}
+.clearfix::after{/* float:left//부모의 높이가 사라져서 부모 높이를 살리기위해 써준 서식들임*/
+    clear: both;
+    display: block;
+    content: "";
+}
+#buy ul li h4{
+    font-size: var(--t-size16);
+    font-weight: bold;
+}
+#buy ul li{
+    width: 33.3333%;
+    float: left;
+    margin-bottom: 60px;
+}
+#buy ul li img{
+    width: 70px;
+    padding: 15px 0px;
+}
+#buy ul li .p03{
+    line-height: 20px;
+}
+
+#buy iframe{
+    width: 1000px;height: 560px;
+    border: none;
+}
 
 
 
