@@ -50,11 +50,15 @@ main{}
     left: 50%;
     text-indent: -9999px;
 }
-#top3, #test, #event, #buy, #cs{
+#top3, #test, #event, #buy{
     margin: 150px auto;
     width: 1200px;
     /* overflow: hidden; */
     /*스와이퍼 슬라이드 보이는 거 숨기기 위해서*/
+}
+#cs{
+    margin: 150px auto 0px auto;
+    width: 1200px;
 }
 
 /* 메인 콘텐츠 공통 제목서식 */
@@ -367,4 +371,130 @@ position: relative;
 }
 
 
+/* 고객지원 서식 */
+#cs{
+    width: 100%;
+    padding:60px;
+    background: #ececec;
+}
+#cs>h2{
+    margin-bottom: 40px;
+}
+#cs article{
+    width: 1200px;
+    margin: 0px auto 20px auto;
+    background: var(--bg-color01);
+}
+#cs article>h3{
+    text-align: center;
+    font-size: var(--t-size18);
+    padding: 60px 0px 20px 0px;
+    font-weight:500;
+}
+#cs article div{/*플로트로 부모 높이 사라져서 부모의 높이 주기위해 클리어픽스(클리어보스,디스플레이 블럭, 컨텐츠"" 줌*/
+    width: 50%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 60px 0px;
+}
+.ars_left{
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.cs_p{
+    width: 200px;
+    text-align: center;
+    
+}
+.cs_p strong{
+    font-weight: 500;
+    font-size: var(--t-size16);
+}
+.cs_p a{
+    color: var(--t-color03);
+    line-height: 30px;
+}
+.cs_p a::after{
+    content:' >';
+    color: var(--t-color03);
+}
 
+/* 스프라이트 이미지 삽입 */
+.car, .member{
+    width: 60px;height: 40px;
+    display: inline-block;
+    background: url(../images/ico-main-guide.72b7c3f.png);
+    text-indent: -9999px;
+    background-size: 300px;
+}
+.car{
+    position: relative;
+    top: 27px;
+    /* transform: translateY(50px); */
+    background-position: 126px 3px;
+}
+.member{
+    width: 61px;
+    background-position: -237px 7px;
+}
+#cs dl{
+    /* padding-left: 20px; */
+    line-height: 22px;
+}
+#cs dt{
+    font-weight: bold;
+}
+#cs dd{
+    color: #6d6d6d;
+}
+#cs ul{
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+#cs ul li{
+    width: 300px;
+    padding: 50px;
+    position: relative;
+    background: #fff;
+}
+.cs2{
+    padding-bottom: 20px;
+}
+.cs2 >li >div{
+    margin: 10px auto 0px auto;
+    text-align: center;
+}
+#cs ul li:not(:last-child){
+    margin-right: 20px;
+}
+#cs ul li p strong{
+    font-weight: 500;
+    line-height: 50px;
+    font-size: var(--t-size16);
+}
+.cs2 .t1{
+    color: var(--t-color03);
+    line-height: 50px;
+}
+.t3{
+    position: absolute;bottom: 20px;
+    display: inline-block;
+    width: 200px;height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #002c5f;
+    
+    color: #fff;
+}
+.t4{
+    color: var(--t-color03);
+    position: relative;
+    top: 20px;
+ 
+}
+.banner11{
+    /* padding-bottom: 10px; */
+}

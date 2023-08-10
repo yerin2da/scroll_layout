@@ -92,4 +92,11 @@ $('.next_btn').click(function(e){
         Timer = setInterval(moveLeft,3000);
     });
 
+    //1. 이벤트 배너 자바스크립트
+    let img_num = Math.floor(Math.random()*5+1);
+    // document.getElementById('banner1').src="./images/banner0"+img_num+".jpg"
+
+    //2. 이벤트 배너 제이쿼리
+    $('#banner1').attr('src','./images/banner0'+img_num+'.jpg');
+
 });

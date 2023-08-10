@@ -9,10 +9,11 @@
     --t-color01:#333;
     --t-color02:#fff;
     --t-color03:#066aad;
-    --bg-colo01:#fff;
+    --bg-color01:#fff;
     --t-size12:12px;
     --t-size14:14px;
     --t-size16:16px;
+    --t-size18:18px;
 }
 body{
     font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
